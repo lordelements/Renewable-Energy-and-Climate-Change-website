@@ -3,22 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Freelance Graphic Design - Innovation in Renewable Energy & Climate Change
-    </title>
+    <title>Innovation in Renewable Energy & Climate Change</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
       rel="stylesheet"
+    />
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
 
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/bootstrap_css/bootstrap.min.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Navigation Bar -->
+    <!-- Start Navigation Bar -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
-        <a class="navbar-brand text-light" href="#">GreenInnovate</a>
+        <a class="navbar-brand text-light" href="#">Green<span class="navbar-span">Innovate</span></a>
+        
         <button
           class="navbar-toggler"
           type="button"
@@ -27,34 +34,46 @@
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
+           onclick="toggleMenu()"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#hero"
-                >Home</a
-              >
+              <a class="nav-link" href="#hero">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About Us</a>
+              <a class="nav-link" href="#services">Service</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#testimonials">Testimonials</a>
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
+
+          <div class="text-end">
+            <button type="button" class="btn btn-sm btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#modalSignin">
+              Login
+            </button>
+            <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modalSignup">Sign-up</button>
+          </div>
+         
         </div>
       </div>
     </nav>
+    <!-- End Navigation Bar -->
 
-    <main>
+    <!-- start main content -->
+    <main class="main">
       <!-- Hero Section with Slider -->
       <section id="hero">
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -87,7 +106,7 @@
                 <h1 class="display-3 text-light fw-bold">
                   Innovative Design for a Sustainable Future
                 </h1>
-                <p class="lead text-light">
+                <p class="lead text-light fw-bold">
                   Empowering renewable energy brands through creativity.
                 </p>
                 <a
@@ -115,7 +134,7 @@
                 <h1 class="display-3 text-light fw-bold">
                   Design That Drives Climate Action
                 </h1>
-                <p class="lead text-light">
+                <p class="lead text-light fw-bold">
                   Transforming ideas into impactful visuals for a greener
                   planet.
                 </p>
@@ -139,7 +158,7 @@
                 <h1 class="display-3 text-light fw-bold">
                   Creativity Meets Sustainability
                 </h1>
-                <p class="lead text-light">
+                <p class="lead text-light fw-bold">
                   Visual storytelling for renewable energy innovations.
                 </p>
                 <a href="#contact" class="btn btn-success btn-lg"
@@ -170,40 +189,46 @@
       </section>
 
       <!-- Portfolio Section -->
-      <section id="portfolio" class="container py-5">
-        <h2 class="text-center mb-4">
+      <section id="portfolio" class="container py-5 mt-4">
+        <h2 class="section-heading text-center mb-4 mt-4 fw-bold" style="color: #1e88e5">
           Innovative Design for Renewable Energy & Climate Change
         </h2>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom">
             <img
               src="assets/img/hero-image2.jpg"
               alt="Project 1"
               class="img-fluid rounded mb-3"
             />
             <p>
+              <div class="line"></div>
               Branding for a wind energy startup, capturing the essence of clean
               energy in a modern visual identity.
             </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom">
             <img
               src="assets/img/american-public-power-association-XGAZzyLzn18-unsplash.jpg"
               alt="Project 2"
               class="img-fluid rounded mb-3"
             />
             <p>
+              <div class="line"></div>
               Interactive web design for a solar energy firm, designed to
               educate and inspire action for sustainable solutions.
             </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom">
             <img
               src="assets/img/hero-image3.jpg"
               alt="Project 3"
               class="img-fluid rounded mb-3"
             />
             <p>
+              <div class="line"></div>
               Eco-friendly packaging design for a climate change awareness
               campaign.
             </p>
@@ -211,8 +236,78 @@
         </div>
       </section>
 
+      <!-- Services Section -->
+      <section id="services" class="container-fluid py-5 mt-4" style="background-color: #f1f8ff">
+        <div class="container text-center">
+            <h2 class="section-heading mt-4" style="color: #1e88e5">Services</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom">
+                    <div class="service-card">
+                        <img src="assets/img/hero-image1.jpg" alt="Branding">
+                        <h4>Renewable Energy Branding</h4>
+                        <p>Helping companies craft visual identities that promote sustainability.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom">
+                    <div class="service-card">
+                        <img src="assets/img/hero-image2.jpg" alt="Campaigns">
+                        <h4>Climate Change Campaigns</h4>
+                        <p>Designing powerful visuals that drive climate action and awareness.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom">
+                    <div class="service-card">
+                        <img src="assets/img/hero-image3.jpg" alt="Eco-Friendly Design">
+                        <h4>Eco-Friendly Product Design</h4>
+                        <p>Innovative packaging and branding for sustainable products.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Blog Section -->
+      <section id="blog" class="container-fluid py-5 mt-4">
+        <div class="container text-center">
+            <h2 class="section-heading mt-4" style="color: #1e88e5">Latest Blog Posts</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom">
+                    <div class="blog-card">
+                      <img src="assets/img/hero-image3.jpg" alt="Eco-Friendly Design">
+                        <h4>5 Ways Design is Changing Renewable Energy</h4>
+                        <p>How branding and design are revolutionizing the clean energy sector.</p>
+                        <a href="#" class="text-warning">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom">
+                    <div class="blog-card">
+                      <img src="assets/img/hero-image3.jpg" alt="Eco-Friendly Design">
+                        <h4>Innovative Trends in Climate Change Awareness</h4>
+                        <p>The latest visual storytelling techniques driving climate action.</p>
+                        <a href="#" class="text-warning">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom">
+                    <div class="blog-card">
+                      <img src="assets/img/hero-image3.jpg" alt="Eco-Friendly Design">
+                        <h4>The Future of Eco-Friendly Product Design</h4>
+                        <p>Why sustainable packaging is shaping the future of business.</p>
+                        <a href="#" class="text-warning">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
       <!-- About Me Section -->
-      <section id="about" class="py-5" style="background-color: #f1f8ff">
+      <section id="about" class="py-5 mt-4" style="background-color: #f1f8ff" data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom">
         <div class="container text-center">
           <div class="row align-items-center">
             <div class="col-md-6">
@@ -223,7 +318,8 @@
               />
             </div>
             <div class="col-md-6 text-start">
-              <h2 class="text-primary" style="color: #1e88e5">About Us</h2>
+              <h2 class="" style="color: #1e88e5">About Us</h2>
+              <div class="line"></div>
               <p style="color: #555">
                 We are a dedicated team of environmentalists and energy experts
                 committed to promoting renewable energy solutions and raising
@@ -243,14 +339,15 @@
       </section>
 
       <!-- Testimonials Section -->
-      <section id="testimonials" class="py-5">
+      <section id="testimonials" class="py-5 mt-4">
         <div class="container">
-          <h2 class="text-center mb-4" style="color: #1e88e5">
+          <h2 class="section-heading text-center mb-4" style="color: #1e88e5">
             What Clients Say
           </h2>
           <div class="row">
             <!-- Testimonial 1 -->
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
               <div class="card border-0 shadow-lg">
                 <img
                   src="assets/img/Emily.jpg"
@@ -269,7 +366,8 @@
               </div>
             </div>
             <!-- Testimonial 2 -->
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
               <div class="card border-0 shadow-lg">
                 <img
                   src="assets/img/James.jpg"
@@ -288,7 +386,8 @@
               </div>
             </div>
             <!-- Testimonial 3 -->
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
               <div class="card border-0 shadow-lg">
                 <img
                   src="assets/img/Sophia.jpg"
@@ -311,11 +410,12 @@
       </section>
 
       <!-- Contact Form Section -->
-      <section id="contact" class="bg-light py-5">
+      <section id="contact" class="bg-light py-5 mt-4">
         <div class="container">
-          <h2 class="text-center mb-4">
+          <h2 class="section-heading text-center mb-4 mt-4" class="fw-bold" style="color: #1e88e5">
             Ready to Create Something Innovative?
           </h2>
+
           <p class="text-center">
             Let’s collaborate on a project that drives sustainability forward.
             Get in touch to discuss your ideas and see how design can transform
@@ -349,13 +449,14 @@
                 </div>
               </div>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-3">
               <label for="message">Message</label>
               <textarea
                 class="form-control"
                 id="message"
                 name="message"
                 rows="5"
+                placeholder="Write text here..."
                 required
               ></textarea>
             </div>
@@ -366,16 +467,146 @@
         </div>
       </section>
     </main>
+    <!-- end main content -->
 
-    <!-- Footer -->
+    <!-- Login Modal -->
+    <div  class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" id="modalSignin">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h2 class="fw-bold mb-0 fs-2">Sign In
+               <div class="line"></div>
+            </h2>
+            
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+    
+          <div class="modal-body p-5 pt-0">
+            <form class="">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+              <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign in</button>
+              <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+              <hr class="my-4">
+              <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+              <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"/></svg>
+                Sign in with Twitter
+              </button>
+              <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"/></svg>
+                Sign in with Facebook
+              </button>
+              <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
+                Sign in with GitHub
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div  class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" id="modalSignup">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h2 class="fw-bold mb-0 fs-2">Create your account
+              <div class="line"></div>
+            </h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+    
+          <div class="modal-body p-5 pt-0">
+            <form class="">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="John Doe">
+                <label for="floatingInput">Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Confirm Password">
+                <label for="floatingPassword">Confirm Password</label>
+              </div>
+              <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+              <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+              <hr class="my-4">
+              <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+              <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"/></svg>
+                Sign up with Twitter
+              </button>
+              <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"/></svg>
+                Sign up with Facebook
+              </button>
+              <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
+                Sign up with GitHub
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Start Footer -->
     <footer class="text-center py-4">
-      <p>&copy; 2025 Freelance Graphic Design. All Rights Reserved.</p>
-    </footer>
+      <ul class="footer-nav">
+        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#testimonials">Testimonials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
+      <div class="footer-social">
+        <a href="https://facebook.com" target="_blank"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://twitter.com" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://instagram.com" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://linkedin.com" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+
+      <p>
+        &copy; 2025 Innovation in Renewable Energy & Climate Change. All Rights
+        Reserved.
+      </p>
+    </footer>
+    <!-- End Footer -->
+
     <script src="assets/bootstrap_js/bootstrap.bundle.min.js"></script>
     <script src="assets/bootstrap_js/bootstrap.min.js"></script>
     <script src="assets/bootstrap_js/bootstrap.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/togglebtn.js"></script>
 
     <script>
       $(document).ready(function () {
@@ -391,6 +622,7 @@
           );
         });
       });
+      
     </script>
   </body>
 </html>
